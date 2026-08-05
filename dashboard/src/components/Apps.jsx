@@ -1,0 +1,27 @@
+import axios from "axios";
+
+export default function Apps() {
+  const handleLogout = async () => {
+    try {
+      const { data } = await axios.post(
+        "http://localhost:3002/logout",
+        {},
+        { withCredentials: true },
+      );
+
+      if (data.success) {
+        window.location.href = "http://localhost:5173/login";
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <>
+      <div className="home_page">
+        <button onClick={handleLogout}>LOGOUT</button>
+      </div>
+    </>
+  );
+}
