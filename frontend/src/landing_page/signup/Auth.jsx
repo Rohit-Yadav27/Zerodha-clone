@@ -40,7 +40,7 @@ const { email, password, username } = inputValue;
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "https://zerodha-clone-f7l4-d7vsevheh-rohit-aadc.vercel.app/";
+          window.location.href = "https://zerodha-clone-f7l4-2nb022p1q-rohit-aadc.vercel.app/";
         }, 1000);
       } else {
         handleError(message);

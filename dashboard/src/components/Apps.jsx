@@ -10,7 +10,7 @@ export default function Apps() {
       );
 
       if (data.success) {
-        window.location.href = "https://zerodha-clone-ewtq6n35m-rohit-aadc.vercel.app/login";
+        window.location.href = "https://zerodha-clone-1p5b4r399-rohit-aadc.vercel.app/login";
       }
     } catch (error) {
       console.log(error);
