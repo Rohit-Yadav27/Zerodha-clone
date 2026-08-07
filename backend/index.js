@@ -26,7 +26,7 @@ app.use("/",authRoutes);
 
 
 const { HoldingsModel } = require("./model/HoldingsModel");
-const { PositionsModel } = require("./model/positionsModel");
+const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
 
