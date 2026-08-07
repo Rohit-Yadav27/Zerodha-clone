@@ -278,6 +278,6 @@ app.post("/sellOrder", async (req, res) => {
 // });
 
 app.listen(PORT, () => {
-  console.log("app listion on port 3002");
+  console.log(`app listion on port ${PORT}`);
   console.log("db connect");
 });
