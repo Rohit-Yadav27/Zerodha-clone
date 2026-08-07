@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,} from "react-router-dom";
 import axios from "axios";
 
 export default function Auth() {
@@ -40,7 +40,7 @@ const { email, password, username } = inputValue;
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:5174/";
+          window.location.href = "https://zerodha-clone-f7l4-d7vsevheh-rohit-aadc.vercel.app/";
         }, 1000);
       } else {
         handleError(message);

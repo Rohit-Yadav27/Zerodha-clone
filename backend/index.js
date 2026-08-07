@@ -6,8 +6,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "http://localhost:5174",
+    "https://zerodha-clone-ewtq6n35m-rohit-aadc.vercel.app/",
+    "https://zerodha-clone-f7l4-d7vsevheh-rohit-aadc.vercel.app/",
   ],
   credentials: true,
 }));
