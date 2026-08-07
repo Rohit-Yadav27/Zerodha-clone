@@ -30,7 +30,7 @@ const { email, password, username } = inputValue;
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+        " https://zerodha-clone-9188.onrender.com/signup",
         {
           ...inputValue,
         },

@@ -28,7 +28,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+        " https://zerodha-clone-9188.onrender.com/login",
         {
           ...inputValue,
         },
@@ -53,7 +53,7 @@ export default function Login() {
     });
   };
   useEffect(() => {
-  axios.get("http://localhost:3002/verify", {
+  axios.get(" https://zerodha-clone-9188.onrender.com/verify", {
     withCredentials: true,
   })
   .then((res) => {

@@ -4,7 +4,7 @@ export default function Apps() {
   const handleLogout = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/logout",
+        " https://zerodha-clone-9188.onrender.com/logout",
         {},
         { withCredentials: true },
       );

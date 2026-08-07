@@ -13,7 +13,7 @@ export default function sellActionWindow({ uid }) {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = () => {
-    axios.post("http://localhost:3002/sellOrder",
+    axios.post("https://zerodha-clone-9188.onrender.com/sellOrder",
       {
         name: uid,
         qty: stockQuantity,
