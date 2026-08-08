@@ -12,8 +12,9 @@ export default function sellActionWindow({ uid }) {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleSellClick = () => {
-    axios.post("https://zerodha-clone-9188.onrender.com/sellOrder",
+  const handleSellClick = async() => {
+    try{
+    const response = await axios.post("https://zerodha-clone-9188.onrender.com/sellOrder",
       {
         name: uid,
         qty: stockQuantity,
@@ -21,6 +22,10 @@ export default function sellActionWindow({ uid }) {
         mode: "SELL",
       });
       GeneralContext.closeSellWindow();
+      console.log("Buy response:", response.data);
+    }catch (error) {
+    console.log("sell error:", error);
+  }
   };
 
   const handleCancelClick = () => {
