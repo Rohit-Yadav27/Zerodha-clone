@@ -12,14 +12,20 @@ export default function BuyActionWindow({ uid }) {
   const [stockPrice, setstockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
+    try{
     axios.post(" https://zerodha-clone-9188.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
       mode: "BUY",
     });
+    console.log("Buy response:", response.data);
     GeneralContext.closeBuyWindow();
+    }catch (error) {
+    console.log("Buy error:", error);
+  }
   };
+
 
   const handleCancelClick = () => {
     GeneralContext.closeBuyWindow();
