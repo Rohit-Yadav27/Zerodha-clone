@@ -5,7 +5,8 @@ import GeneralContext from "./GeneralContext";
 import axios from "axios";
 
 import "./BuyActionWindow.css";
-import { useState } from "react";
+import { useContext ,useState } from "react";
+const { closeBuyWindow } = useContext(GeneralContext);
 
 export default function BuyActionWindow({ uid }) {
   const [stockQuantity, setStockQuantity] = useState(1);
@@ -20,7 +21,7 @@ export default function BuyActionWindow({ uid }) {
       mode: "BUY",
     });
     console.log("Buy response:", response.data);
-    GeneralContext.closeBuyWindow();
+    closeBuyWindow();
     }catch (error) {
     console.log("Buy error:", error);
   }
