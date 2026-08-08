@@ -6,9 +6,11 @@ import axios from "axios";
 
 import "./BuyActionWindow.css";
 import { useContext ,useState } from "react";
-const { closeBuyWindow } = useContext(GeneralContext);
 
 export default function BuyActionWindow({ uid }) {
+
+  const { closeBuyWindow } = useContext(GeneralContext);
+  
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setstockPrice] = useState(0.0);
 
