@@ -13,7 +13,6 @@ export default function sellActionWindow({ uid }) {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = async() => {
-    try{
     const response = await axios.post("https://zerodha-clone-9188.onrender.com/sellOrder",
       {
         name: uid,
@@ -23,9 +22,6 @@ export default function sellActionWindow({ uid }) {
       });
       GeneralContext.closeSellWindow();
       console.log("Buy response:", response.data);
-    }catch (error) {
-    console.log("sell error:", error);
-  }
   };
 
   const handleCancelClick = () => {
