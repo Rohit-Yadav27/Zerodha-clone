@@ -22,10 +22,9 @@ export default function BuyActionWindow({ uid }) {
       price: stockPrice,
       mode: "BUY",
     });
-    console.log("Buy response:", response.data);
     closeBuyWindow();
     }catch (error) {
-    console.log("Buy error:", error);
+    console.log("Buy failed:", error);
   }
   };
 
