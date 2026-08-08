@@ -13,7 +13,7 @@ export default function BuyActionWindow({ uid }) {
 
   const handleBuyClick = () => {
     try{
-    axios.post(" https://zerodha-clone-9188.onrender.com/newOrder", {
+    const response = axios.post(" https://zerodha-clone-9188.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
