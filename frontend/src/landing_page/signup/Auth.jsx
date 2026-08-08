@@ -40,7 +40,7 @@ const { email, password, username } = inputValue;
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href =  "zerodha-clone-f7l4.vercel.app";
+          window.location.href =  "https://zerodha-clone-f7l4.vercel.app";
         }, 1000);
       } else {
         handleError(message);

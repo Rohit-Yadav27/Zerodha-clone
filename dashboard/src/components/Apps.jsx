@@ -10,7 +10,7 @@ export default function Apps() {
       );
 
       if (data.success) {
-        window.location.href = "zerodha-clone-delta-puce.vercel.app/login";
+        window.location.href = "https://zerodha-clone-delta-puce.vercel.app/login";
       }
     } catch (error) {
       console.log(error);
